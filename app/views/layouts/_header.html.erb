@@ -1,0 +1,17 @@
+<div class="container mb-4">
+  <div class="row">
+    <div class="col pt-3">
+      <div class="float-right">
+        <% if account_signed_in? %>
+          <%= link_to "Sign Out", destroy_account_session_path, method: :delete, class: "btn btn-danger" %>
+        <% else %>
+          <%= link_to "Sign In", new_account_session_path, class: "btn btn-light" %>
+          <%= link_to "Sign Up", new_account_registration_path, class: "btn btn-success" %>
+        <% end %>
+      </div>
+        <span>
+          <%= link_to "Job Board", root_path, class: "text-dark h4" %>
+        </span>
+    </div>
+  </div>
+</div>
